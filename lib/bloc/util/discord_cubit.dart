@@ -75,7 +75,7 @@ class DiscordBloc extends Bloc<DiscordEvent, DiscordState> {
 
     if (connectedDevices.length == 1) {
       DeviceCubit device = connectedDevices.first;
-      details = "${device.device?.name} connected.";
+      details = "${device.device?.displayName ?? device.device?.name} connected.";
     }
 
     if (connectedDevices.length > 1) {
